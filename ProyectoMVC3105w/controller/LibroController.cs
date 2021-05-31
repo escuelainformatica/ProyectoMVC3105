@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProyectoMVC3105w.modelo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,13 @@ namespace ProyectoMVC3105w.controller
         {
             ViewBag.libro="Harry Potter";
             ViewData["libro"]="Harry Potter";
+
+            return View();
+        }
+        public IActionResult MostrarModelo()
+        {
+            Libro libro=new Libro("Harry Potter","Autor");
+            ViewBag.libro=libro;
 
             return View();
         }
